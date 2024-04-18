@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Forms</title>
-    <link rel="stylesheet" href="login.css">
-    <script src="https://kit.fontawesome.com/bee8690ca6.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Forms</title>
+        <link rel="stylesheet" href="login.css">
+        <script src="https://kit.fontawesome.com/bee8690ca6.js" crossorigin="anonymous"></script>
+    
+        <!-- Firebase SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+        
+        <!-- Firebase Initialization -->
+        <script type="module" src="init.js"></script>
+        <!-- Your additional JavaScript files should also be modules if using type="module" -->
+        <script type="module" src="script.js"></script>
+    </head>
+    
 <body>
 <div class="container">
     <div class="form">
@@ -32,6 +42,15 @@
                 <button type="button" class="disable">Sign In</button>
         </form>
     </div>
+
+    <h3>Login Form</h3>
+<form id="login-form">
+  <input type="email" id="user-email" placeholder="Email">
+  <input type="password" id="user-pass" placeholder="Password">
+  <button type="button" onclick="login()">Login</button>
+  <button type="button" onclick="signup()">Signup</button>
+</form>
+
 </div>
 </body>
 </html>
